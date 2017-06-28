@@ -63,6 +63,14 @@ func main() {
 		c.HTML(http.StatusOK, "hw1.html", gin.H{})
 	})
 
+	v1.GET("/hw1_v2", func(c *gin.Context){
+		c.HTML(http.StatusOK, "hw1_v2.html", gin.H{})
+	})
+
+	v1.GET("/hw1_v3", func(c *gin.Context){
+		c.HTML(http.StatusOK, "hw1_v3.html", gin.H{})
+	})
+
 	router.StaticFS("/resources", gin.Dir("hello/resources", false))
 
 	router.GET("/user/:name", func(c *gin.Context) {

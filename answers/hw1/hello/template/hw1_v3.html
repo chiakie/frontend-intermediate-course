@@ -19,18 +19,17 @@
         .row {
             width: 1000px;
             margin: 0 auto;
-            text-align: center;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         .col {
             width:300px;
-            display:inline-block;
-            margin-right:20px;
+            /* display:inline-block; */ /* Replace with flex */
+            /* margin-right:20px; */ /* Replace with justify-content: space-around */
             margin-bottom:20px;
-        }
-
-        .col:nth-child(3n) { /* 3n: 第3個 第6個 第9個 ...依此類推 */
-            margin-right:0; /* 以達到真正的置中樣貌 */
         }
 
         .preview img {
@@ -41,18 +40,20 @@
             position:relative; /* 設定intro div的參考點 */
             padding:10px;
             background-color: rgba(0, 0, 0, 0.6);
+
+            display:flex;
+            align-items: center; /* vertical */
+            /* justify-content: center; */ /* horizontal */
         }
 
         .intro {
-            position: absolute; /* 把intro div設成absolute, 然後再調整在detail裡的位置(top, left, ..) */
-            top: 14px;
-            left: 70px;
             color:white;
         }
 
         .avatar {
             width: 50px;
             height: 50px;
+            margin-right:10px;
             overflow: hidden; /* 內容會被修剪, 並且其餘內容不可見 */
             border-radius: 50%; /* 讓圖的外框變成圓形, 最多到50% */
         }
@@ -63,6 +64,11 @@
 
         .channel_name {
             margin-bottom:10px;
+
+            white-space: nowrap; /* 文字死都不換行 */
+            text-overflow: ellipsis; /* 出現點點點的樣式 */
+            overflow: hidden; /* 把多的裁掉 */
+            width:200px; /* 設定範圍 */
         }
 
     </style>
@@ -79,7 +85,7 @@
                     <img class="content" src="../resources/head-300x300.png" />
                 </div>
                 <div class="intro">
-                    <div class="channel_name">頻道名稱</div>
+                    <div class="channel_name">頻道名稱頻道名稱頻道名稱頻道名稱頻道名稱頻道名稱頻道名稱</div>
                     <div class="owner_name">實況主名字</div>
                 </div>
             </div>
@@ -196,6 +202,8 @@
                 </div>
             </div>
         </div>
+        <div class="col"></div> <!--塞空的div 避免row有缺口會造成排版失調-->
+        <div class="col"></div> <!--塞空的div 避免row有缺口會造成排版失調-->
     </div>
 </div>
 </body>
