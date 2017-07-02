@@ -23,15 +23,15 @@ left: 70px;
 margin: 0 auto;
   
 ## 設定圓形圖片div
-overflow: hidden; /* 內容會被修剪, 並且其餘內容不可見 */  
-border-radius: 50%; /* 讓div的外框變成圓形, 最多到50% */  
+overflow: hidden; (內容會被修剪, 並且其餘內容不可見)  
+border-radius: 50%; (讓div的外框變成圓形, 最多到50%)  
   
 ## 設定為3的倍數child element的CSS
 <selector>:nth-child(3n) {...}  
   
 ## 取代inline-block的方法, 可以將container設為flexbox
-display: flex; 
-align-items: center; /* 垂直置中 */  
-justify-content: center /* 水平置中 */  
-justify-content: space-around /* 平均分配間隔給content divs */  
-flex-wrap: wrap; /* 將超過container邊界的div做wrapping(斷行) */ 
+display: flex;  
+align-items: center; (垂直置中)  
+justify-content: center; (水平置中)  
+justify-content: space-around; (平均分配間隔給content divs)  
+flex-wrap: wrap; (將超過container邊界的div做wrapping)  
