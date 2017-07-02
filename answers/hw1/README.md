@@ -35,3 +35,13 @@ align-items: center; (垂直置中)
 justify-content: center; (水平置中)  
 justify-content: space-around; (平均分配間隔給content divs)   
 flex-wrap: wrap; (將超過container邊界的div做wrapping)  
+
+## 讓文字太長出現...的做法
+white-space: nowrap; (文字死都不換行)   
+text-overflow: ellipsis; (出現點點點的樣式)   
+overflow: hidden; (把多的裁掉)   
+width:200px; (設定範圍)   
+
+## 參考文獻
+[CSS 語法，文字換行，強迫不換行。](https://www.puritys.me/docs-blog/article-31-CSS-%E8%AA%9E%E6%B3%95%EF%BC%8C%E6%96%87%E5%AD%97%E6%8F%9B%E8%A1%8C%EF%BC%8C%E5%BC%B7%E8%BF%AB%E4%B8%8D%E6%8F%9B%E8%A1%8C%E3%80%82.html)
+
